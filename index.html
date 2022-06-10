@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Fonts --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,400;1,500&display=swap" rel="stylesheet">    
+    <!--Google Fonts --> 
+    <!--Fonts Awesome --> 
+    <script src="https://kit.fontawesome.com/6bbb95791d.js" crossorigin="anonymous"></script>
+    <!--Fonts Awesome --> 
+    <!--mi estilos --> 
+     <link rel="stylesheet" href="assets/css/style.css">    
+    <title>Desafio: Media Querys</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <main class="container">
+        <nav class="menu-mobile">
+                <a class="logo-a" href="#" >
+                   <img class="logo-img" src="assets/img/electric_car-icon.png" alt="logo electric cars"> 
+                   <div class="logo-title">
+                    Electric Cars
+                  </div>
+                </a>
+                <button class="open-menu" aria-label="open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+        </nav>
+        <nav class="menu-tabdesk">
+            <a class="logo-a" href="#" >
+                <img class="logo-img" src="/assets/img/electric_car-icon.png" alt="logo electric cars"> 
+                <div class="logo-title">
+                 Electric Cars
+               </div>
+            </a>
+            <ul class="menu-item">
+                        <li class="menu-item-li"><a class="menu-item-link" href="#inicio"></a>Inicio</li>
+                        <li class="menu-item-li"><a class="menu-item-link" href="#catalogo"></a>Catálogo</li>
+                        <li class="menu-item-li"><a class="menu-item-link" href="#ofertas"></a>Ofertas</li>
+                        <li class="menu-item-li"><a class="menu-item-link" href="#contacto"></a>Contacto</li>
+            </ul>  
+                    
+        </nav>
+        <div class="busqueda">
+            <p class="busqueda-texto">Ordenar por:</p><br>            
+            <form name="formulario" method="post" action="#">
+                <!-- Lista de selección -->
+                <select name="combo">
+                  <!-- Opciones de la lista -->
+                  <option value="1">Marca</option>
+                  <option value="2" selected>Precio</option> <!-- Opción por defecto -->
+                  <option value="3">Modelo</option>
+                </select>
+            </form>
+        </div>
+        <div class="productos">
+            <div class="card-mobile">
+                <div class="card">
+                    <img class="card-img" src="/assets/img/Auto_Electrico_01.jpg" alt="">
+                    <p class="card-title">Card title1</p>
+                    <a href="">Ver Más</a>
+                </div>
+           </div>
+
+           <div class="card-tabdesk">
+                <div class="card">
+                    <img class="card-img" src="assets/img/Auto_Electrico_01.jpg" alt="">
+                    <p class="card-title">Card title1</p>
+                    <a href="">Ver Más</a>
+                </div>
+                <div class="card">
+                        <img class="card-img" src="assets/img/Auto_Electrico_02.jpg" alt="">
+                        <p class="card-title">Card title2</p>
+                        <a href="">Ver Más</a>
+                </div>
+                <div class="card">
+                        <img class="card-img" src="/assets/img/Auto_Electrico_03.jpg" alt="">
+                        <p class="card-title">Card title3</p>
+                        <a href="">Ver Más</a>
+                </div>
+                <div class="card">
+                        <img class="card-img" src="/assets/img/Auto_Electrico_04.jpg" alt="">
+                        <p class="card-title">Card title4</p>
+                        <a href="">Ver Más</a>
+                </div>
+                <div class="card">
+                        <img class="card-img" src="/assets/img/Auto_Electrico_05.jpg" alt="">
+                        <p class="card-title">Card title5</p>
+                        <a href="">Ver Más</a>
+                </div>
+                <div class="card">
+                        <img class="card-img" src="/assets/img/Auto_Electrico_06.jpg" alt="">
+                        <p class="card-title">Card title6</p>
+                        <a href="">Ver Más</a>
+                </div>
+                <div class="card">
+                        <img class="card-img" src="/assets/img/Auto_Electrico_07.jpg" alt="">
+                        <p class="card-title">Card title7</p>
+                        <a href="">Ver Más</a>
+                    </div>
+                    <div class="card">
+                        <img class="card-img" src="/assets/img/Auto_Electrico_08.jpg" alt="">
+                        <p class="card-title">Card title8</p>
+                        <a href="">Ver Más</a>
+                    </div>
+            </div>
+        </div>
+<!--        <div class="pagina">pagina</div>-->
+        <!--  PAGINACION-->
+        <div clase="pagina">
+            <ul class="pagination">
+                <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            </a>
+                </li>
+            </ul>
+        </div>            
+         <!--  PAGINACION-->
+        <footer class="footer">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <p>Todos los derechos reservados</p>
+        </footer>
+    </main>
+</body>
+</html>

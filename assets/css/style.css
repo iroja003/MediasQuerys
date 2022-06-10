@@ -1,0 +1,353 @@
+:root{
+    --color-fondo: #E7EECF; 
+    --font-familia:'Roboto', sans-serif;
+    --color-primario:#124F88;
+    --color-secundario:#F7C331;
+    --color_texto-inverso:white;
+    --color-texto:black;
+    --color-fondo-menu:#E5E5E5;
+    --color-fondo-menu-celu: #3A4460;
+    --color-fondo-busqueda: #e7e7e7; 	
+    --color-formulario:white;
+    --color-hover:#949c7c;
+    --color-hover-li:#0d0e27;
+}
+
+*{
+  box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+    font-family: var(--font-familia);
+    font-size: 18px;
+    min-height: 100%;
+}
+
+.container >* {
+    box-shadow: -1px 1px 7px 0px rgba(0,0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* logo */
+
+.logo-a {
+    display: flex;  
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color_texto-inverso);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.logo-img{
+    width: 30px;
+    height: 30px;   
+    border-radius: 50%;
+    padding-left: 3px;
+}
+
+.logo-title{
+    padding-left: 5px;
+}
+
+.menu-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;       
+    grid-area: ME;
+    background-color: var(--color-primario) ;/* #85aedd;*/
+    color:var(--color_texto-inverso);
+}
+
+
+.open-menu{
+    color: white;
+    background-color: var(--color-primario);
+    border: none;
+    font-size: 30px;
+    padding: 0px 20px;
+    line-height: 40px;
+}
+
+.busqueda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: BU;
+    background-color: var(--color-fondo-busqueda);
+}
+
+.busqueda-texto{
+        font-family: var(--font-familia);
+        font-size: 15px;
+}
+
+.productos{
+    display: flex;
+    justify-content: center;
+    grid-area: PR;
+    flex-wrap: wrap;
+    background-color:white;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background-color: white;
+    width:  250px;
+    height: 350px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.card-img{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.card p{
+    padding:10px ;
+    font-family: var(--font-familia);
+    color: var(--color-texto);
+    font-size: 15px;
+ }
+
+.card a{
+   background-color: var(--color-primario);
+   text-decoration: none;
+   font-family: var(--font-familia);
+   color: var(--color_texto-inverso);
+   font-size: 12px;
+   padding: 10px 20px;
+   display:block;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.card a:hover{
+    background-color: var(--color-hover);
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+
+.pagina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: PA;
+    background-color: #f5f5f5;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--font-familia);
+    font-size: 12px;
+}
+
+.page-item{
+    padding: 0px 2px;
+}
+
+.footer{
+    grid-area  : FO;
+    background-color: var(--color-primario) ;/* #85aedd;*/
+    color:var(--color_texto-inverso);
+    font-size: 12px;
+}
+
+
+.container{
+    display: grid;
+    gap: 10px   ;
+    grid-template-areas: 
+    "ME"
+    "BU"
+    "PR"
+    "PA"
+    "FO"
+    ;
+
+}
+.menu-tabdesk{
+    display: none;
+}
+
+.card-tabdesk{
+    display: none;
+}
+
+/* MEDIAS QUERYS*/
+   /* TABLET*/
+   @media screen and (min-width: 768px) {
+    .container{
+        grid-template-columns: 200px auto;
+        grid-template-rows: 50px 430px 50px 50px;
+        grid-template-areas: 
+        "MET BU"
+        "MET PR"
+        "MET PA"
+        "FO  FO" ;
+      }
+ 
+    .menu-mobile{
+        display: none;
+    }
+
+    .menu-tabdesk{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-area: MET;
+        padding: 7px;       
+        background-color: var(--color-primario) ;/* #85aedd;*/
+        color:var(--color_texto-inverso);
+    }
+    
+       .logo-a{
+        padding-top: 20px;   
+        margin-bottom: 20px;
+    }  
+
+    .menu-item {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom:250px ;
+    }
+    .menu-item-li{
+        flex-direction: column;
+        font-size: 12px;
+        list-style: none;
+        line-height: 20px;
+    }
+
+    .menu-item-li:hover{
+        background-color: var(--color-hover);
+        cursor: pointer;
+        transition: 1s ease;   
+    }
+    .productos{
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: 5px;
+    }
+
+    .card-mobile{
+        display: none;
+    }
+
+    .card-tabdesk{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2);
+        gap: 5px;
+    }
+
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+
+        background-color: white;
+        width:  140px;
+        height: 160px;
+        margin: 10px;
+        border-radius: 15px;
+    }
+
+    .card a:hover{
+        background-color: var(--color-hover);
+    }
+
+    
+}
+  
+   /* DESKTOP */
+
+   @media screen and (min-width: 1024px) { 
+    .container{
+        grid-template-columns: 200px auto;
+        grid-template-rows: 70px 490px 70px;
+        grid-template-areas: 
+        "MET BU"
+        "MET PR"
+        "FO  PA" ;
+       }
+
+    .menu-tabdesk{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-area: MET;
+        padding: 7px;       
+        background-color: var(--color-primario) ;/* #85aedd;*/
+        color:var(--color_texto-inverso);
+    }
+    
+
+    .logo-a{
+        padding-top: 20px;   
+        margin-bottom: 20px;
+    }  
+
+     .productos{
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: 10px;
+        justify-items: center;
+        align-items: center;
+     }
+
+    .card-mobile{
+        display: none;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        background-color: white;
+        width:  140px;
+        height: 160px;
+        margin: 10px;
+        border-radius: 15px;
+    }
+
+    .card a:hover{
+        background-color: var(--color-hover);
+    }
+
+
+    .pagination{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer{
+      justify-content: center;  
+      align-items: center;     
+    }
+
+}
